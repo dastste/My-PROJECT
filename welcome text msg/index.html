@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+  <script type="text/javascript">
+    let date = new Date();
+    let currentHours = date.getHours();
+    console.log(currentHours);
+    let head =  document.createElement('h4');
+
+    let textMsg;
+
+    if (currentHours >= 4 && currentHours < 10) {
+      textMsg = 'Good Morning!';
+    }else if (currentHours >= 10 && currentHours < 12) {
+      textMsg = 'Good Day!'
+    }else if (currentHours >= 12 && currentHours < 18) {
+      textMsg = 'Good Noon!';
+    }else if (currentHours >=18 && currentHours < 22) {
+      textMsg = 'Good Evening!';
+    }else if (currentHours >= 24 && currentHours < 4) {
+      textMsg = 'Good Night!';
+    }
+
+    paragh = document.createTextNode(textMsg);
+    head.appendChild(paragh);
+    document.body.appendChild(head);
+    head.setAttribute('class', 'wel');
+    document.querySelector('.wel').style.cssText = "text-align: center; font-size: 40px; color: #0e6cff"
+    /*head.style.cssText = "text-align: center; font-size: 40px; color: #0e6cff"*/
+
+
+  </script>
+</html>
